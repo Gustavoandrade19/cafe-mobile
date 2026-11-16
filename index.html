@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6f4e37">
+  <meta name="description" content="Café Mobile - cardápio e galeria de fotos.">
+  <title>Café Mobile</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+</head>
+<body>
+  <header class="topo">
+    <h1>☕ Café Mobile</h1>
+    <span id="status-conexao" class="status-conexao">Verificando conexão...</span>
+  </header>
+
+  <main>
+    <!-- Filtros de categoria -->
+    <div class="filtros">
+      <button class="filtro ativo" data-categoria="Todos">Todos</button>
+      <button class="filtro" data-categoria="Cafés">Cafés</button>
+      <button class="filtro" data-categoria="Geladas">Geladas</button>
+      <button class="filtro" data-categoria="Salgados">Salgados</button>
+      <button class="filtro" data-categoria="Doces">Doces</button>
+    </div>
+
+    <!-- Produtos do cardápio original -->
+    <div class="lista-produtos">
+      <article class="card" data-categoria="Cafés">
+        <div class="card-emoji">☕</div>
+        <div class="card-info">
+          <h3>Espresso</h3>
+          <p>Café curto e encorpado</p>
+          <strong>R$ 6,00</strong>
+        </div>
+        <button class="btn-adicionar" aria-label="Adicionar Espresso">+</button>
+      </article>
+
+      <article class="card" data-categoria="Cafés">
+        <div class="card-emoji">☕</div>
+        <div class="card-info">
+          <h3>Cappuccino</h3>
+          <p>Espresso, leite vaporizado e espuma</p>
+          <strong>R$ 9,50</strong>
+        </div>
+        <button class="btn-adicionar" aria-label="Adicionar Cappuccino">+</button>
+      </article>
+
+      <article class="card" data-categoria="Salgados">
+        <div class="card-emoji">🧀</div>
+        <div class="card-info">
+          <h3>Pão de queijo</h3>
+          <p>Porção com 4 unidades</p>
+          <strong>R$ 7,00</strong>
+        </div>
+        <button class="btn-adicionar" aria-label="Adicionar Pão de queijo">+</button>
+      </article>
+
+      <article class="card" data-categoria="Doces">
+        <div class="card-emoji">🍰</div>
+        <div class="card-info">
+          <h3>Bolo de cenoura</h3>
+          <p>Fatia com cobertura de chocolate</p>
+          <strong>R$ 8,00</strong>
+        </div>
+        <button class="btn-adicionar" aria-label="Adicionar Bolo de cenoura">+</button>
+      </article>
+    </div>
+
+    <section class="secao-galeria" aria-labelledby="titulo-galeria">
+      <div class="cabecalho-galeria">
+        <div>
+          <p class="subtitulo">REGISTRE SEU MOMENTO</p>
+          <h2 id="titulo-galeria">Galeria <span id="contador-fotos">(0)</span></h2>
+        </div>
+      </div>
+      <p class="descricao-galeria">Tire uma foto e guarde seu momento no Café Mobile.</p>
+
+      <div class="acoes-camera">
+        <button id="btn-abrir-camera" class="btn-principal">Abrir câmera</button>
+        <button id="btn-limpar-galeria" class="btn-secundario">Limpar galeria</button>
+      </div>
+
+      <p id="mensagem-camera" class="mensagem" role="status">
+        A câmera será solicitada quando você tocar em “Abrir câmera”.
+      </p>
+
+      <div id="painel-camera" class="painel-camera" hidden>
+        <video id="video-camera" autoplay playsinline></video>
+        <div class="acoes-camera">
+          <button id="btn-tirar-foto" class="btn-principal">Tirar foto</button>
+          <button id="btn-fechar-camera" class="btn-secundario">Fechar câmera</button>
+        </div>
+      </div>
+
+      <canvas id="canvas-foto" hidden></canvas>
+      <div id="galeria-fotos" class="galeria-fotos">
+        <p class="galeria-vazia">Ainda não há fotos. Seja o primeiro a registrar um momento!</p>
+      </div>
+    </section>
+
+    <section class="aviso-pwa">
+      <span>📲</span>
+      <div>
+        <strong>Instale o Café Mobile</strong>
+        <p>Em navegadores compatíveis, use o menu e escolha “Instalar app” ou “Adicionar à tela inicial”.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Café Mobile • Projeto educacional</footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

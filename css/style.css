@@ -1,0 +1,42 @@
+* { box-sizing: border-box; }
+:root { --marrom: #6f4e37; --marrom-escuro: #4d3324; --creme: #fff8ef; --texto: #30251f; --cinza: #786b62; }
+body { margin: 0; background: #fffdf9; color: var(--texto); font-family: Arial, Helvetica, sans-serif; }
+.topo { min-height: 76px; padding: 16px max(5vw, 20px); display: flex; align-items: center; justify-content: space-between; gap: 12px; background: #fff; border-bottom: 1px solid #eee4d9; }
+.topo h1 { margin: 0; color: var(--marrom-escuro); font-size: 25px; }
+.status-conexao { color: #52734b; font-size: 12px; }
+main { max-width: 1000px; margin: 28px auto; padding: 0 20px; }
+.filtros { display: flex; gap: 9px; flex-wrap: wrap; margin-bottom: 22px; }
+.filtro { border: 1px solid #e6d9ce; background: #fff; color: var(--marrom); padding: 10px 16px; border-radius: 22px; cursor: pointer; }
+.filtro.ativo { background: var(--marrom); color: white; border-color: var(--marrom); }
+.lista-produtos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.card { display: flex; align-items: center; gap: 14px; padding: 17px; border: 1px solid #eee3d9; border-radius: 15px; background: white; box-shadow: 0 5px 18px #6f3e260b; }
+.card-emoji { width: 55px; height: 55px; flex: 0 0 55px; display: grid; place-items: center; background: #f8eee5; border-radius: 13px; font-size: 29px; }
+.card-info { flex: 1; min-width: 0; }
+.card-info h3 { margin: 0 0 5px; font-size: 16px; }
+.card-info p { margin: 0 0 7px; color: var(--cinza); font-size: 13px; }
+.card-info strong { color: var(--marrom); }
+.btn-adicionar { width: 36px; height: 36px; border: 0; border-radius: 50%; background: var(--marrom); color: white; font-size: 23px; cursor: pointer; }
+.secao-galeria { margin-top: 48px; padding-top: 28px; border-top: 1px solid #eee4d9; }
+.subtitulo { margin: 0 0 5px; color: #9b6748; font-size: 11px; font-weight: bold; letter-spacing: 1.8px; }
+.cabecalho-galeria h2 { margin: 0; font-size: 28px; }
+.descricao-galeria { color: var(--cinza); font-size: 14px; }
+.acoes-camera { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+.btn-principal, .btn-secundario { border: 0; border-radius: 9px; padding: 12px 17px; font-weight: bold; cursor: pointer; }
+.btn-principal { background: var(--marrom); color: white; }
+.btn-secundario { background: #f1e7de; color: var(--marrom); }
+.mensagem { padding: 12px; background: #fff7ee; color: #795b46; border-radius: 9px; font-size: 13px; }
+.painel-camera { max-width: 560px; padding: 14px; background: #251d19; border-radius: 15px; }
+.painel-camera video { display: block; width: 100%; max-height: 360px; margin-bottom: 12px; background: #111; border-radius: 9px; }
+.galeria-fotos { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; margin-top: 20px; }
+.foto-card { overflow: hidden; background: white; border: 1px solid #eee3d9; border-radius: 12px; }
+.foto-card img { display: block; width: 100%; height: 145px; object-fit: cover; }
+.foto-info { padding: 10px; }
+.foto-info strong { display: block; font-size: 14px; overflow-wrap: anywhere; }
+.foto-info small { display: block; margin-top: 5px; color: var(--cinza); }
+.galeria-vazia { color: #88796e; font-size: 14px; }
+.aviso-pwa { display: flex; gap: 13px; align-items: center; margin: 45px 0 25px; padding: 17px; background: #f7eee5; border-radius: 13px; }
+.aviso-pwa span { font-size: 27px; }
+.aviso-pwa p { margin: 5px 0 0; color: var(--cinza); font-size: 13px; }
+footer { padding: 23px; text-align: center; border-top: 1px solid #eee8e2; color: #8c7b70; font-size: 12px; }
+[hidden] { display: none !important; }
+@media (max-width: 650px) { main { margin: 20px auto; padding: 0 14px; } .lista-produtos { grid-template-columns: 1fr; } .topo h1 { font-size: 21px; } .status-conexao { max-width: 100px; text-align: right; } }
